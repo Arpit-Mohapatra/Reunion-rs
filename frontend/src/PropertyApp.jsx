@@ -1,9 +1,7 @@
 // src/PropertyApp.js
 import React, { useState } from "react";
 import {
-  AppBar,
   Container,
-  Toolbar,
   Typography,
   Grid,
   Card,
@@ -14,8 +12,10 @@ import {
   InputLabel,
   Slider,
   Button,
+  Toolbar,
 } from "@mui/material";
 import properties from "./data/properties";
+import LiveSearch from "./components/LiveSearch";
 
 const PropertyApp = () => {
   const [filteredProperties, setFilteredProperties] = useState(properties);
@@ -49,12 +49,11 @@ const PropertyApp = () => {
 
   return (
     <div>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6">Rent a Property</Typography>
-        </Toolbar>
-      </AppBar>
       <Container>
+        <Toolbar>
+          <Typography variant="h4">Search Properties to Rent</Typography>
+          <LiveSearch></LiveSearch>
+        </Toolbar>
         <div style={{ margin: "20px 0" }}>
           <Grid container spacing={3}>
             <Grid item xs={3}>
@@ -68,6 +67,16 @@ const PropertyApp = () => {
                   <MenuItem value="">Any Type</MenuItem>
                   <MenuItem value="Apartment">Apartment</MenuItem>
                   <MenuItem value="House">House</MenuItem>
+                  <MenuItem value="House">Condo</MenuItem>
+                  <MenuItem value="House">Cabin</MenuItem>
+                  <MenuItem value="House">Loft</MenuItem>
+                  <MenuItem value="House">Villa</MenuItem>
+                  <MenuItem value="House">Cottage</MenuItem>
+                  <MenuItem value="House">Penthouse</MenuItem>
+                  <MenuItem value="House">Cabin</MenuItem>
+                  <MenuItem value="House">Studio</MenuItem>
+                  <MenuItem value="House">Townhouse</MenuItem>
+                  <MenuItem value="House">Farmhouse</MenuItem>
                 </Select>
               </FormControl>
             </Grid>

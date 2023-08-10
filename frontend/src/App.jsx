@@ -1,11 +1,16 @@
+import { Container } from '@mui/material'
 import './App.css'
 import PropertyApp from './PropertyApp'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="App">
+    <Container>
+      <Header></Header>
       <PropertyApp></PropertyApp>
-    </div>
+      <Footer></Footer>
+    </Container>
   )
 }
 
